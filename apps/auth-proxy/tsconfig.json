@@ -1,0 +1,4 @@
+{
+  "extends": "@niceai/tsconfig/base.json",
+  "include": ["routes"]
+}
