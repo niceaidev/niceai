@@ -1,1 +1,1 @@
-# niceai
+# Nice AI

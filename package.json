@@ -4,30 +4,34 @@
   "engines": {
     "node": ">=20.12.0"
   },
-  "packageManager": "pnpm@9.0.4",
+  "packageManager": "pnpm@9.4.0",
+  "type": "module",
   "scripts": {
-    "build": "turbo build",
-    "clean": "git clean -xdf node_modules",
-    "clean:workspaces": "turbo clean",
-    "db:push": "pnpm -F db push",
-    "db:studio": "pnpm -F db studio",
-    "dev": "turbo dev --parallel",
-    "format": "turbo format --continue -- --cache --cache-location node_modules/.cache/.prettiercache",
-    "format:fix": "turbo format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
-    "lint": "turbo lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
-    "lint:fix": "turbo lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "build": "turbo run build",
+    "clean": "git clean -xdf node_modules dist .turbo",
+    "clean:workspaces": "turbo run clean",
+    "db:push": "turbo -F @niceai/db push",
+    "db:studio": "turbo -F @niceai/db studio",
+    "dev": "turbo watch dev",
+    "dev:next": "turbo watch dev -F @niceai/nextjs...",
+    "format": "prettier --write .",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "turbo run lint --continue -- --cache --cache-location node_modules/.cache/.eslintcache",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "lint:ws": "pnpm dlx sherif@latest",
     "postinstall": "pnpm lint:ws",
-    "typecheck": "turbo typecheck",
-    "ui-add": "pnpm -F ui ui-add"
+    "test": "vitest",
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add"
   },
   "devDependencies": {
-    "@niceai/prettier-config": "workspace:*",
-    "@turbo/gen": "^1.13.3",
-    "eslint": "^9.2.0",
-    "prettier": "^3.2.5",
-    "turbo": "^1.13.3",
-    "typescript": "^5.4.5"
-  },
-  "prettier": "@niceai/prettier-config"
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.2",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "turbo": "^2.0.5",
+    "typescript": "^5.5.2",
+    "unplugin-swc": "^1.4.5",
+    "vitest": "^1.6.0"
+  }
 }

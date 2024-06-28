@@ -1,28 +1,29 @@
-"use client";
+'use client';
 
-import type * as LabelPrimitive from "@radix-ui/react-label";
+import type * as LabelPrimitive from '@radix-ui/react-label';
 import type {
   ControllerProps,
   FieldPath,
   FieldValues,
   UseFormProps,
-} from "react-hook-form";
-import type { ZodType, ZodTypeDef } from "zod";
-import * as React from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { cn } from "@niceai/ui";
-import { Slot } from "@radix-ui/react-slot";
+} from 'react-hook-form';
+import type { ZodType, ZodTypeDef } from 'zod';
+import * as React from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { Slot } from '@radix-ui/react-slot';
 import {
   useForm as __useForm,
   Controller,
   FormProvider,
   useFormContext,
-} from "react-hook-form";
+} from 'react-hook-form';
 
-import { Label } from "./label";
+import { cn } from '@niceai/ui';
+
+import { Label } from './label';
 
 const useForm = <TOut, TDef extends ZodTypeDef, TIn extends FieldValues>(
-  props: Omit<UseFormProps<TIn>, "resolver"> & {
+  props: Omit<UseFormProps<TIn>, 'resolver'> & {
     schema: ZodType<TOut, TDef, TIn>;
   },
 ) => {
@@ -66,7 +67,7 @@ const useFormField = () => {
   const { getFieldState, formState } = useFormContext();
 
   if (!fieldContext) {
-    throw new Error("useFormField should be used within <FormField>");
+    throw new Error('useFormField should be used within <FormField>');
   }
   const fieldState = getFieldState(fieldContext.name, formState);
 
@@ -98,11 +99,11 @@ const FormItem = React.forwardRef<
 
   return (
     <FormItemContext.Provider value={{ id }}>
-      <div ref={ref} className={cn("space-y-2", className)} {...props} />
+      <div ref={ref} className={cn('space-y-2', className)} {...props} />
     </FormItemContext.Provider>
   );
 });
-FormItem.displayName = "FormItem";
+FormItem.displayName = 'FormItem';
 
 const FormLabel = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>,
@@ -113,13 +114,13 @@ const FormLabel = React.forwardRef<
   return (
     <Label
       ref={ref}
-      className={cn(error && "text-destructive", className)}
+      className={cn(error && 'text-destructive', className)}
       htmlFor={formItemId}
       {...props}
     />
   );
 });
-FormLabel.displayName = "FormLabel";
+FormLabel.displayName = 'FormLabel';
 
 const FormControl = React.forwardRef<
   React.ElementRef<typeof Slot>,
@@ -142,7 +143,7 @@ const FormControl = React.forwardRef<
     />
   );
 });
-FormControl.displayName = "FormControl";
+FormControl.displayName = 'FormControl';
 
 const FormDescription = React.forwardRef<
   HTMLParagraphElement,
@@ -154,12 +155,12 @@ const FormDescription = React.forwardRef<
     <p
       ref={ref}
       id={formDescriptionId}
-      className={cn("text-[0.8rem] text-muted-foreground", className)}
+      className={cn('text-[0.8rem] text-muted-foreground', className)}
       {...props}
     />
   );
 });
-FormDescription.displayName = "FormDescription";
+FormDescription.displayName = 'FormDescription';
 
 const FormMessage = React.forwardRef<
   HTMLParagraphElement,
@@ -176,14 +177,14 @@ const FormMessage = React.forwardRef<
     <p
       ref={ref}
       id={formMessageId}
-      className={cn("text-[0.8rem] font-medium text-destructive", className)}
+      className={cn('text-[0.8rem] font-medium text-destructive', className)}
       {...props}
     >
       {body}
     </p>
   );
 });
-FormMessage.displayName = "FormMessage";
+FormMessage.displayName = 'FormMessage';
 
 export {
   useForm,
@@ -197,4 +198,4 @@ export {
   FormField,
 };
 
-export { useFieldArray } from "react-hook-form";
+export { useFieldArray } from 'react-hook-form';
