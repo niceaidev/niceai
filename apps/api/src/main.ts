@@ -39,7 +39,7 @@ const run = async () => {
     const port = app.get(ConfigService).get('api.port', { infer: true });
     const url = `http://localhost:${port}`;
     generateSwagger(app, url);
-    await app.listen(port);
+    await app.listen(port, '0.0.0.0');
     console.log(`Application started on: ${url} `);
   } catch (error) {
     pinoLogger.error(error);

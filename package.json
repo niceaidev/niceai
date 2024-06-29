@@ -11,6 +11,8 @@
     "clean": "git clean -xdf node_modules dist .turbo",
     "clean:workspaces": "turbo run clean",
     "db:push": "turbo -F @niceai/db push",
+    "start": "turbo run start",
+    "api:start": "turbo -F @niceai/api start",
     "db:studio": "turbo -F @niceai/db studio",
     "dev": "turbo watch dev",
     "dev:next": "turbo watch dev -F @niceai/nextjs...",

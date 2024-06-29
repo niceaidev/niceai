@@ -9,7 +9,7 @@
     "dev": "pnpm with-env nest start --watch",
     "with-env": "dotenv -e ../../.env --",
     "start:debug": "nest start --debug --watch",
-    "start": "node dist/main",
+    "start": "pnpm with-env nest start",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
   },
   "dependencies": {
