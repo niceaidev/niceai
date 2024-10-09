@@ -1,0 +1,18 @@
+{
+  "name": "niceai-scripts",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "niceai-scripts": "bin/niceai-scripts.js"
+  },
+  "dependencies": {
+    "cac": "^6.7.14",
+    "chalk": "^5.3.0",
+    "cross-spawn": "^7.0.3",
+    "zx": "^8.1.9"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "niceai-api",
+      "script": "./build/index.js",
+      "instances": "max",
+      "max_restarts": 3,
+      "restart_delay": 10000,
+      "exec_mode": "cluster",
+      "exp_backoff_restart_delay": 100
+    }
+  ]
+}

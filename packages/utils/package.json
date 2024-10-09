@@ -1,0 +1,33 @@
+{
+  "name": "@niceai/utils",
+  "version": "0.0.0-alpha.1",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "repository": {
+    "url": "https://github.com/niceaidev/niceai",
+    "type": "git",
+    "directory": "packages/utils"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsup"
+  },
+  "sideEffects": false,
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "devDependencies": {
+    "nanoid": "^5.0.7",
+    "superjson": "^2.2.1"
+  }
+}

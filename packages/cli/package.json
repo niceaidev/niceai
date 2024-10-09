@@ -1,0 +1,38 @@
+{
+  "name": "@niceai/cli",
+  "version": "0.0.0-alpha.26",
+  "description": "Niceai CLI",
+  "type": "module",
+  "bin": {
+    "niceai": "./bin/niceai.js",
+    "na": "./bin/niceai.js"
+  },
+  "files": ["bin", "dist"],
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "url": "https://github.com/niceaidev/niceai",
+    "type": "git",
+    "directory": "packages/cli"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@vercel/build-utils": "^8.4.10",
+    "@vercel/ncc": "^0.38.2",
+    "cac": "^6.7.14",
+    "esbuild": "^0.24.0",
+    "fast-glob": "^3.3.2",
+    "fs-extra": "^11.2.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
+  }
+}
