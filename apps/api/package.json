@@ -32,7 +32,7 @@
     "@langchain/anthropic": "^0.3.3",
     "@langchain/community": "^0.3.4",
     "@langchain/core": "^0.3.9",
-    "@langchain/openai": "^0.3.5",
+    "@langchain/openai": "^0.3.6",
     "@nest-lab/throttler-storage-redis": "^1.0.0",
     "@nestjs/axios": "^3.0.3",
     "@nestjs/bullmq": "^10.2.1",
