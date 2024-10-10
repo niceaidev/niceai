@@ -1,15 +1,19 @@
 import type { Config } from 'drizzle-kit';
+import assert from 'node:assert';
 
-if (!process.env.DATABASE_URL) {
-  throw new Error('Missing DATABASE_URL');
-}
+const connectionString = process.env.DATABASE_URL;
 
-const nonPoolingUrl = process.env.DATABASE_URL;
+assert(
+  connectionString,
+  '`DATABASE_URL` or `DATABASE_URL` not found in environment',
+);
 
 const config: Config = {
   schema: './src/database/schemas/*',
   dialect: 'postgresql',
-  dbCredentials: { url: nonPoolingUrl },
+  out: './src/database/migrations',
+  strict: true,
+  dbCredentials: { url: connectionString },
 };
 
 export default config;

@@ -23,7 +23,7 @@
   },
   "license": "Apache-2.0",
   "dependencies": {
-    "@vercel/build-utils": "^8.4.10",
+    "@vercel/build-utils": "^8.4.11",
     "@vercel/ncc": "^0.38.2",
     "cac": "^6.7.14",
     "esbuild": "^0.24.0",

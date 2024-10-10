@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api(/.*)?",
-      "destination": "https://api.niceai.com/api$1"
+      "destination": "https://api.niceai.dev/api$1"
     }
   ]
 }
