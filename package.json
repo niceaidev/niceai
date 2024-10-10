@@ -1,7 +1,7 @@
 {
   "name": "niceai-monorepo",
   "private": true,
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.12.1",
   "type": "module",
   "scripts": {
     "prebuild": "NODE_ENV=production turbo build --filter=\"./packages/*\"",
@@ -43,6 +43,6 @@
   },
   "engines": {
     "node": "^18.19.0 || >=20.0.0",
-    "pnpm": "^9.0.0"
+    "pnpm": "^9.12.1"
   }
 }
