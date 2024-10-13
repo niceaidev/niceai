@@ -15,7 +15,6 @@
     "setup": "niceai-scripts setup",
     "clean": "niceai-scripts clean",
     "build:docker": "turbo build:docker",
-    "turbo:clean": "rimraf apps/**/.turbo packages/**/.turbo",
     "start:docker": "turbo start:docker",
     "db:studio": "turbo db:studio",
     "start": "turbo run start --filter=\"./apps/*\"",

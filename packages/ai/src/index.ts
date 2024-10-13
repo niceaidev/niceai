@@ -1,1 +1,1 @@
-export * from '@niceai/cache';
+export const ai = {};
