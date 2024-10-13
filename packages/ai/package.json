@@ -27,14 +27,9 @@
     "registry": "https://registry.npmjs.org"
   },
   "dependencies": {
-    "@niceai/cache": "workspace:*"
+    "langchain": "^0.3.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.10",
-    "ioredis": "^5.4.1",
-    "superjson": "^2.2.1"
-  },
-  "peerDependices": {
-    "ioredis": "^5.4.1"
+    "typescript": "^5.6.3"
   }
 }

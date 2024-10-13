@@ -16,7 +16,7 @@
   "vulnerabilityAlerts": {
     "commitMessagePrefix": "chore(renovate): Security update"
   },
-  "schedule": "at any time",
+  "schedule": ["before 2am"],
   "rangeStrategy": "bump",
   "packageRules": [
     {
@@ -43,6 +43,13 @@
       "matchUpdateTypes": ["pin", "digest"],
       "commitMessagePrefix": "chore(renovate):",
       "groupName": "pin"
+    },
+    {
+      "matchPackageNames": [
+        "node",
+        "pnpm"
+      ],
+      "enabled": false
     }
   ],
   "ignorePaths": ["**/node_modules/**", "**/test/**", "**/tests/**"],
