@@ -24,8 +24,6 @@ export default async function handleRequest(
 
   const i18nInstance = createInstance();
   const lng = await i18neServer.getLocale(request);
-  // const ns = i18neServer.getRouteNamespaces(remixContext);
-  console.log('locale', lng);
 
   await i18nInstance
     .use(initReactI18next) // Tell our instance to use react-i18next
@@ -60,11 +58,10 @@ export default async function handleRequest(
           shellRendered = true;
           const body = new PassThrough({
             transform(c, _, callback) {
-              let chunk = c.toString();
+              let chunk = String(c);
               if (!isStyleExtracted) {
-                const str: string = chunk.toString();
-                if (str.includes(antdStyle)) {
-                  chunk = str.replace(
+                if (chunk.includes(antdStyle)) {
+                  chunk = chunk.replace(
                     antdStyle,
                     isBot ? '' : extractStyle(cache),
                   );

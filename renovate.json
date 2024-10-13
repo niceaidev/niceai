@@ -16,7 +16,7 @@
   "vulnerabilityAlerts": {
     "commitMessagePrefix": "chore(renovate): Security update"
   },
-  "schedule": "at any time",
+  "schedule": ["before 2am"],
   "rangeStrategy": "bump",
   "packageRules": [
     {

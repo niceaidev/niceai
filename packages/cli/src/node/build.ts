@@ -3,7 +3,7 @@ import path from 'node:path';
 // @ts-ignore
 import ncc from '@vercel/ncc';
 
-type VercelRuntime = 'node' | 'edge';
+export type VercelRuntime = 'node' | 'edge';
 
 export interface BuildOptions {
   output: string;
