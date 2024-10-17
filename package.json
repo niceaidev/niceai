@@ -4,8 +4,7 @@
   "packageManager": "pnpm@9.12.1",
   "type": "module",
   "scripts": {
-    "prebuild": "NODE_ENV=production turbo build --filter=\"./packages/*\"",
-    "build": "NODE_ENV=production turbo build --filter=\"./apps/*\"",
+    "build": "NODE_ENV=production turbo build --filter=\"./apps/*\" --force",
     "format": "biome format --fix .",
     "lint": "biome lint --fix .",
     "db:generate": "turbo db:generate",

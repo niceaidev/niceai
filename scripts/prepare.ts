@@ -10,6 +10,10 @@ import { PATHS } from './internal/constants';
     args.unshift('--filter', `"./packages/*"`);
   }
 
+  if (process.env.VERCEL) {
+    args.unshift('--force');
+  }
+
   args.unshift('--output-logs', 'errors-only');
 
   const command = `turbo run ${args.join(' ')} build`;
