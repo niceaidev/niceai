@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { LanguageSwitch } from '../components/i18n/switch';
 import { useLoaderData } from '@remix-run/react';
 import i18next from '../i18n/i18next.server';
+import { siteConfig } from '../const/site';
 
 export async function loader({ request }: LoaderFunctionArgs) {
   const t = await i18next.getFixedT(request);
@@ -16,8 +17,8 @@ export async function loader({ request }: LoaderFunctionArgs) {
 
 export const meta: MetaFunction = () => {
   return [
-    { title: 'New Remix App' },
-    { name: 'description', content: 'Welcome to Remix!' },
+    { title: `${siteConfig.title} - ${siteConfig.description}` },
+    { name: 'description', content: siteConfig.description },
   ];
 };
 
