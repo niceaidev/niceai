@@ -45,10 +45,7 @@
       "groupName": "pin"
     },
     {
-      "matchPackageNames": [
-        "node",
-        "pnpm"
-      ],
+      "matchPackageNames": ["node", "pnpm", "fastify", "@fastify/*", "helmet"],
       "enabled": false
     }
   ],

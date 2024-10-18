@@ -20,11 +20,8 @@ const ignoredRouteFiles = [
 ];
 
 export default defineConfig({
-  build: {
-    target: 'esnext',
-  },
   server: {
-    port: 3000,
+    port: Number(process.env.PORT || 3000),
   },
   plugins: [
     i18nAlly({
