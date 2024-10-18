@@ -45,6 +45,10 @@
       "groupName": "pin"
     },
     {
+      "matchDepTypes": ["engines"],
+      "enabled": false
+    },
+    {
       "matchPackageNames": ["node", "pnpm", "fastify", "@fastify/*", "helmet"],
       "enabled": false
     }

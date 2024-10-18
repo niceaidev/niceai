@@ -30,7 +30,6 @@ let outOfContext: pino.Logger | undefined;
 
 export function __resetOutOfContextForTests() {
   outOfContext = undefined;
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore reset root for tests only
   PinoLogger.root = undefined;
 }
@@ -80,7 +79,6 @@ export class PinoLogger implements PinoMethods {
 
   get logger(): pino.Logger {
     // outOfContext is always set in runtime before starts using
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return storage.getStore()?.logger || outOfContext!;
   }
 
@@ -157,7 +155,6 @@ export class PinoLogger implements PinoMethods {
         args = [{ [this.contextName]: this.context }, ...args];
       }
     }
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore args are union of tuple types
     this.logger[method](...args);
   }
