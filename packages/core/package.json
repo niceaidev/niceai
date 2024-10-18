@@ -31,7 +31,7 @@
     "@niceai/cache": "workspace:*"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.10",
+    "@types/lodash": "^4.17.11",
     "ioredis": "^5.4.1",
     "superjson": "^2.2.1"
   },
