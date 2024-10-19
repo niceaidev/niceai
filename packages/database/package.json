@@ -1,6 +1,6 @@
 {
-  "name": "@niceai/cache",
-  "version": "0.0.3",
+  "name": "@niceai/database",
+  "version": "0.0.0-alpha.1",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -9,18 +9,12 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
-    },
-    "./node": {
-      "types": "./dist/node.d.ts",
-      "import": "./dist/node.mjs",
-      "require": "./dist/node.cjs"
     }
   },
-  "files": ["dist"],
   "repository": {
     "url": "https://github.com/niceaidev/niceai",
     "type": "git",
-    "directory": "packages/cache"
+    "directory": "packages/database"
   },
   "license": "Apache-2.0",
   "scripts": {
@@ -28,25 +22,16 @@
     "dev": "tsup --watch"
   },
   "sideEffects": false,
+  "private": false,
   "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
+    "access": "public"
   },
   "dependencies": {
     "ioredis": "^5.4.1",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "superjson": "^2.2.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.11",
-    "superjson": "^2.2.1",
-    "typescript": "^5.6.3"
-  },
-  "peerDependices": {
-    "ioredis": "^5.4.1"
-  },
-  "peerDependenciesMeta": {
-    "ioredis": {
-      "required": true
-    }
+    "@types/lodash": "^4.17.11"
   }
 }

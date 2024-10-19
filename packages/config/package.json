@@ -27,14 +27,10 @@
     "access": "public"
   },
   "dependencies": {
-    "ioredis": "^5.4.1",
     "lodash": "^4.17.21",
     "superjson": "^2.2.1"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.10"
-  },
-  "peerDependices": {
-    "ioredis": "^5.4.1"
+    "@types/lodash": "^4.17.11"
   }
 }
