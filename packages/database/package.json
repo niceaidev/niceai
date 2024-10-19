@@ -1,5 +1,5 @@
 {
-  "name": "@niceai/config",
+  "name": "@niceai/database",
   "version": "0.0.0-alpha.1",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
@@ -14,7 +14,7 @@
   "repository": {
     "url": "https://github.com/niceaidev/niceai",
     "type": "git",
-    "directory": "packages/config"
+    "directory": "packages/database"
   },
   "license": "Apache-2.0",
   "scripts": {

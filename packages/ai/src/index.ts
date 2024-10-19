@@ -1,1 +1,2 @@
-export const ai = {};
+export * from './ai';
+export { default } from './ai';

@@ -6,7 +6,7 @@
     "build": {
       "cache": true,
       "dependsOn": ["^build"],
-      "outputs": ["dist/**", ".output/**", ".vercel/output/**"]
+      "outputs": ["dist/**", ".output/**", ".vercel/output/**", "build/**"]
     },
     "start": {
       "dependsOn": ["^start"],

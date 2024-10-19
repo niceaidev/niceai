@@ -7,7 +7,10 @@
     "niceai": "./bin/niceai.js",
     "na": "./bin/niceai.js"
   },
-  "files": ["bin", "dist"],
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup"

@@ -1,1 +1,2 @@
-export * from '@niceai/cache';
+export * from './niceai';
+export { default } from './niceai';

@@ -52,7 +52,7 @@
     "@remix-run/dev": "^2.13.1",
     "@types/cookie": "^0.6.0",
     "@types/js-cookie": "^3.0.6",
-    "@types/lodash": "^4.17.10",
+    "@types/lodash": "^4.17.11",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",

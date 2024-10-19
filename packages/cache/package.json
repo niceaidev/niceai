@@ -9,9 +9,16 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./node": {
+      "types": "./dist/node.d.ts",
+      "import": "./dist/node.mjs",
+      "require": "./dist/node.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "repository": {
     "url": "https://github.com/niceaidev/niceai",
     "type": "git",
@@ -32,7 +39,7 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.10",
+    "@types/lodash": "^4.17.11",
     "superjson": "^2.2.1",
     "typescript": "^5.6.3"
   },
