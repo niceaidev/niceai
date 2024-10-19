@@ -1,6 +1,5 @@
-
 interface NiceAICoreConfig {
-  databaseUrl: string
+  databaseUrl: string;
 }
 
 export class NiceAICore {

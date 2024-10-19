@@ -16,9 +16,7 @@
       "require": "./dist/node.cjs"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "repository": {
     "url": "https://github.com/niceaidev/niceai",
     "type": "git",

@@ -7,8 +7,9 @@ import { createCache, extractStyle, StyleProvider } from '@ant-design/cssinjs';
 import { renderToPipeableStream } from 'react-dom/server';
 import { antdStyle } from './components/antd/const';
 import { createInstance } from 'i18next';
-import i18neServer, { i18nServerOptions } from './i18n/i18next.server';
+import i18nServer, { i18nServerOptions } from './i18n/i18next.server';
 import { I18nextProvider, initReactI18next } from 'react-i18next';
+import { i18nOptions } from './i18n';
 
 const ABORT_DELAY = 5_000;
 
@@ -23,16 +24,17 @@ export default async function handleRequest(
   const callbackName = isBot ? 'onAllReady' : 'onShellReady';
 
   const i18nInstance = createInstance();
-  const lng = await i18neServer.getLocale(request);
+  const lng = await i18nServer.getLocale(request);
+  const ns = i18nServer.getRouteNamespaces(remixContext)
+
 
   await i18nInstance
     .use(initReactI18next) // Tell our instance to use react-i18next
     .init({
       ...i18nServerOptions, // spread the configuration
       lng, // The locale we detected above
-      ns: i18nServerOptions.resources[lng]
-        ? Object.keys(i18nServerOptions.resources[lng])
-        : [...i18nServerOptions.defaultNS],
+      ns,
+      resources: i18nOptions.resources,
     });
 
   return new Promise((resolve, reject) => {
