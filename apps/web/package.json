@@ -65,7 +65,7 @@
     "typescript": "^5.6.3",
     "vite": "^5.4.9",
     "vite-plugin-i18n-ally": "^5.1.0",
-    "vite-plugin-remix-flat-routes": "^3.5.6",
+    "vite-plugin-remix-flat-routes": "^4.1.2",
     "vite-tsconfig-paths": "^5.0.1"
   }
 }
